@@ -1,0 +1,268 @@
+/* INTRODUCTION */
+.intro{
+    color: #121111;
+}
+.intro h2{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+.intro p{
+    color: rgb(67, 62, 62);
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    @media screen and (max-width: 768px){
+        margin-bottom: 60px;
+    }
+
+}
+.intro .line{
+    background: rgb(157, 123, 77);
+    padding: 2px;
+    width: 50px;
+    margin: 10px auto;
+}
+/* INFORMATION */
+.info {
+    display: flex;
+    flex-direction: row;
+    margin: 5px auto;
+    gap: 10px;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 125px;
+
+
+    @media screen and (max-width: 768px){
+        display: block;
+        flex-direction: column;
+        width: 100%;
+  }
+}
+.info img{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    
+    @media screen and (max-width: 768px){
+        height: auto;
+        max-width: 100%;
+  }
+}
+.info_table{
+    flex: 1;
+}
+.info_table h3 {
+    margin-left: 13.5px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 768px){
+         margin-top: 28px;
+    }
+}
+.desc{
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  margin-left: 13.5px;
+  font-size: 12px;
+}
+.info_table p {
+    margin-bottom: 25px;
+    margin-left: 16px;
+    text-align: left;
+    font-size: 14.5px;
+    font-weight: 200px;
+    @media screen and (max-width: 768px){
+        font-size: 15px;
+    }
+}
+
+.info_table section{
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 5px;
+    flex-direction: row;
+    gap: 15px 40px;
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
+}
+.info_table div p{
+    width: 100%;
+}
+.info_table div i{
+    color:rgb(157, 123, 77);
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+.info_table .info_table2 p span{
+    color: rgb(42, 41, 41);
+    font-weight: bolder;
+    /* font-family: Arial, Impact, sans-serif; */
+}
+
+/* SKILLS */
+.skills-section{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    max-width:1200px;
+    margin:0 auto 100px auto;
+    font-size: 20px;
+}
+.skills-section h2{
+    font-size: 37px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 650;
+}
+.skills-section .line{
+    background: rgb(157, 123, 77);
+    padding: 2px;
+    width: 50px;
+    margin: 10px auto;
+}
+.skills-section p{
+    color: rgb(67, 62, 62);
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    @media screen and (max-width: 768px){
+        margin-bottom: 10px;
+    }
+}
+.skills-card{
+    display: flex;
+    /*grid-template-columns: repeat(2,1fr);*/
+    gap: 50px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto 100px auto;
+    align-items: flex-start;
+}
+.skill_row{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1400px;
+
+    @media screen and (max-width: 768px){
+        display: block;
+        flex-direction: column;
+        width: 95%; 
+    }
+}
+ .progress{
+    background:#e5e5e5;
+    height:13px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress_bar{
+    background:rgb(157,123,77);
+    height:13px;
+    border-radius:20px;
+}
+.skill_container .top{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+.skill_container{
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+}
+.skill_container .top span{
+    margin-top: 25px;
+    margin-bottom: 10x;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* FACTS */
+.facts{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 195px;
+    width: 100%;
+    margin-bottom: 100px;
+
+    @media screen and (max-width: 768px){
+        display: block;
+        flex-direction: column;
+        width: 90%; 
+  }
+}
+.facts div h2{
+    font-size: 52px;
+    font-weight: 630;
+}
+.intro .line2{
+    background: rgb(157, 123, 77);
+    padding: 1.5px;
+    width: 27px;
+    margin: 10px auto;
+}
+
+.intro,
+.info,
+.skill_row,
+.facts {
+  animation: creditRollIn 1s ease-out forwards ;
+}
+
+@keyframes creditRollIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media screen and (max-width:768px){
+
+    .skills-card{
+        flex-direction:column;
+    }
+
+    .info_table2{
+        grid-template-columns:1fr;
+    }
+
+    .skill_row{
+        grid-template-columns:1fr;
+    }
+
+}
+
+

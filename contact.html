@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+</head>
+<body>
+    <header>
+        <p>Salma</p>
+        <nav>
+            <a href="./">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Technical Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="sos_links">
+            <a href="https://github.com/srd8186"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/salma-dabo"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <button class = "opennav" type = "button"> <i class="fa-solid fa-bars"></i></button>
+    </header>
+<main>
+    <section class = "intro">
+        <h2>Contact 
+                <div class="line"></div>
+        </h2>
+
+        <p>Feel free to reach out regarding internships, projects, collaborations, or opportunities</p>
+    </section>
+
+    <section class="contact">
+        <div class="info">
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-location-dot"></i></div>
+                <div>
+                <h3>Address</h3>
+                <p>Dubai, United Arab Emirates</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                <div>
+                <h3>Phone</h3>
+                <p>+971 506063529</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                <div>
+                <h3>Email Me</h3>
+                <p>srd8186@rit.edu</p>
+                </div>
+            </div>
+
+            <!-- <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-map"></i></div>
+                <div>
+                <h3>Location</h3> -->
+                <!-- Wider Map -->
+                <iframe 
+                    src="https://www.google.com/maps?q=Downtown+Conference+Center,+New+York&output=embed" 
+                    width="100%" 
+                    height="250" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    loading="lazy">
+                </iframe>
+                </div>
+            </div>
+        </div>
+
+            <!-- <div class="info">
+                <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+
+                <h3><i class="fas fa-phone"></i> Call Us</h3>
+                <p>+1 5589 55488 55</p>
+
+                <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                <p>info@example.com</p>
+
+                <h3>Location</h3>
+                <iframe 
+                    src="https://www.google.com/maps?q=Downtown+Conference+Center,+New+York&output=embed" 
+                    width="100%" 
+                    height="300" 
+                    frameborder="0" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div> -->
+
+                <form action="">
+                    <div>
+                        <label for="">Your Name</label>
+                        <input type="text" required class="form-control mb-3 ">
+
+                        <label for="">Your Email</label>
+                        <input type="text" required class="form-control mb-3 ">
+                
+                    <div>
+                        <label for="amount">Subject</label>
+                        <input type="text" required class="form-control mb-3 ">
+
+                        <label for=""> Message</label>
+                        <textarea required name="description" id="description" rows= "9" class="form-control mb-3 "></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+    </section>
+
+<footer class = "ending">
+
+    <p>&copy; Copyright <b>Salma</b> All Rights Reserved</p>
+    <div class="sos_links2">
+        <a href="https://github.com/srd8186"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/salma-dabo"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <div class = "iconContainer"></div>
+    <p>Designed and developed by Salma Dabo</p>
+</footer>
+</main>
+<script>
+    document.querySelector('form').addEventListener('submit',(e)=> {
+        e.preventDefault(); //Stops the form from submitting normally
+        elts = document.querySelectorAll('input');
+        for (i = 0; i<elts.length; i++) {
+            if (elts[i].value.trim() == '') {
+                return;
+            }
+        }
+            senMess = document.querySelector('textarea').value.trim();
+            if (senMess == '') {
+                return;
+            }
+            sendername = elts[0].value.trim();
+            email = elts[1].value.trim();
+            sub = elts[2].value.trim();
+            senMess += `\nFrom: ${sendername} \nEmail: ${email} \nSubject: ${sub}\nMessage: ${senMess}`;
+            sendTextMess(sendername, senMess)
+            alert(sendername);
+        });
+
+        //Creating an AJAX function with parameters to send the message
+        async function sendTextMess(sender, text){
+            key = '74951bdefd5ad359bf9d5317f684a172dc8e85dd'
+            myemail = 'salmaadabo08@icloud.com'
+            recipients = '2348168414485'
+
+            url = `https://api.ebulksms.com/sendsms?username=${myemail}&apikey=${key}&sender=${sender}&messagetext=${text}&flash=0&recipients=${recipients}`;
+            req = await fetch(url);
+            res = await req.text();
+            alert(res);
+        }
+</script>
+</body>
+</html>
